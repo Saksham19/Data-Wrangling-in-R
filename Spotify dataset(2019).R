@@ -139,10 +139,10 @@ val_length%>%
 
 
 attach(val_length)
-lmfit<-lm(Length..Duration.~Valence+Popularity+Danceability+Energy+Liveness+Acousticness+Loudness..dB.+Beats.Per.Minute..BPM.+Speechiness)
+lmfit<-lm(Valence~Length..Duration.+Popularity+Danceability+Energy+Liveness+Acousticness+Loudness..dB.+Beats.Per.Minute..BPM.+Speechiness)
 summary(lmfit)
 #p value too small, length seems to be significant at 1% level. Hence, length of the song matters in terms of happiness but not in terms of popularity
-#adjusted R squared is too small tho, so not useful 
+#adjusted R squared is small though
 
 
 
